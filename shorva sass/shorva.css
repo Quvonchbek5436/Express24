@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+#header {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+#header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+#header div img {
+  height: 60px;
+}
+#header div form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  width: 400px;
+  color: gray;
+  border-radius: 8px;
+}
+#header div form input {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+#header div #userProfile {
+  position: relative;
+  cursor: pointer;
+}
+#header div #userProfile > i {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.44);
+}
+#header div #userProfile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#header div #userProfile .userModal {
+  position: absolute;
+  top: 60px;
+  left: -150px;
+  width: 240px;
+  z-index: 10;
+  background-color: white;
+  border-radius: 6px;
+  display: none;
+}
+#header div #userProfile .userModal p {
+  border-radius: 5px;
+  padding: 6px 10px;
+  margin: 0px 5px;
+  cursor: pointer;
+  border-bottom: 1px solid #e9e7e7;
+}
+#header div #userProfile .userModal p:hover {
+  background-color: #f0f1f0;
+}
+
+#imgPrimary img {
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#list {
+  margin: 30px 50px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.list ul li {
+  display: inline-block;
+  text-align: center;
+  padding: 6px 25px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  background: #f0f0f0;
+  transition: all 0.3s ease-in 0s;
+  white-space: nowrap;
+  width: 120px;
+}
+.list ul li a {
+  text-decoration: none;
+  color: black;
+}
+.list ul li:hover {
+  background: #ffd900;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#footer {
+  background-color: #252525;
+  color: #d6d6d6 !important;
+  padding: 30px 50px;
+}
+#footer span {
+  min-width: 100px;
+}
+#footer span a {
+  text-decoration: none;
+  color: white;
+}
+#footer .items div {
+  display: flex;
+  margin: 20px;
+}
+#footer .tg {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+}
+#footer .tg a {
+  color: white;
+  text-decoration: none;
+}
+#footer .toTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f8dc3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  position: fixed;
+  right: 50px;
+  bottom: 0px;
+  cursor: pointer;
+}
+#footer .toTop a {
+  color: #666464;
+}
+
+@media screen and (max-width: 1000px) {
+  #footer {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) and (min-width: 300px) {
+  #header div {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  #header form {
+    width: 100% !important;
+    order: 3;
+  }
+}
+@media screen and (max-width: 420px) and (min-width: 300px) {
+  #header {
+    padding: 20px !important;
+  }
+  #header #userProfile img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+  #header img {
+    height: 45px !important;
+  }
+
+  #list {
+    margin: 20px;
+  }
+  #list .list {
+    margin: 0 auto !important;
+  }
+  #list .list ul {
+    margin: 0 auto !important;
+  }
+}
+body #first .container .row .cards .rasm {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+}
+body #first .container .row .cards .rasm img {
+  width: 100%;
+  height: 200px;
+  border-radius: 7px;
+  overflow: hidden;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+body #first .container .row .cards .rasm img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+body #first .container .row .cards .rasm .qoshish {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body #first .container .row .cards .rasm .qoshish .btn {
+  box-shadow: none;
+}
+body #first .container .row .cards .rasm:hover .qoshish {
+  transition: all 0.5s;
+  opacity: 1;
+}
+body #first .container .row .cards span.my-2 {
+  color: gray;
+}
+body #second .container .row .cards {
+  transition: all 0.5s;
+}
+body #second .container .row .cards .rasm {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+}
+body #second .container .row .cards .rasm img {
+  width: 100%;
+  height: 200px;
+  border-radius: 7px;
+  overflow: hidden;
+  object-fit: cover;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+body #second .container .row .cards .rasm img:hover {
+  transform: scale(1.1);
+}
+body #second .container .row .cards .rasm .qoshish {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body #second .container .row .cards .rasm .qoshish .btn {
+  box-shadow: none;
+}
+body #second .container .row .cards .rasm:hover .qoshish {
+  transition: all 0.5s;
+  opacity: 1;
+}
+body #second .container .row .cards span.my-2 {
+  color: gray;
+}
+body #third .container .row {
+  margin-bottom: 50px;
+}
+body #third .container .row .cards {
+  transition: all 0.5s;
+}
+body #third .container .row .cards .rasm {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+}
+body #third .container .row .cards .rasm img {
+  width: 100%;
+  height: 200px;
+  border-radius: 7px;
+  overflow: hidden;
+  object-fit: cover;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+body #third .container .row .cards .rasm img:hover {
+  transform: scale(1.1);
+}
+body #third .container .row .cards .rasm .qoshish {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+body #third .container .row .cards .rasm .qoshish .btn {
+  box-shadow: none;
+}
+body #third .container .row .cards .rasm:hover .qoshish {
+  transition: all 0.5s;
+  opacity: 1;
+}
+body #third .container .row .cards span.my-2 {
+  color: gray;
+}
+#modal {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.58);
+}
+#modal .card {
+  width: 500px;
+  height: 600px;
+  position: relative;
+}
+#modal .card #hideModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#modal .card .img img {
+  width: 100%;
+}
+#modal .card .shop {
+  padding: 20px;
+}
+
+/*# sourceMappingURL=shorva.css.map */

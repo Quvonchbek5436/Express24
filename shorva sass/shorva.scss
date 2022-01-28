@@ -1,0 +1,438 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1800px;
+  margin: 0 auto;
+
+}
+#header {
+  max-width: 1800px;
+  margin: 0 auto;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    img {
+      height: 60px;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 16px;
+      width: 400px;
+      color: gray;
+      border-radius: 8px;
+      input {
+        border: none;
+        outline: none;
+        width: 90%;
+      }
+    }
+    #userProfile {
+      position: relative;
+      cursor: pointer;
+      &>i{
+        font-size: 40px;
+        color: rgba(0, 0, 0, 0.44);
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .userModal {
+        position: absolute;
+        top: 60px;
+        left: -150px;
+        width: 240px;
+
+        z-index: 10;
+        background-color: white;
+        border-radius: 6px;
+        display: none;
+        p {
+          border-radius: 5px;
+          padding: 6px 10px;
+          margin: 0px 5px;
+          cursor: pointer;
+          border-bottom: 1px solid rgb(233, 231, 231);
+        }
+        p:hover {
+          background-color: rgb(240, 241, 240);
+        }
+      }
+    }
+  }
+}
+
+#imgPrimary {
+  img {
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+#list {
+  margin: 30px 50px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+      text-align: center;
+      padding: 6px 25px;
+      margin: 10px 10px;
+      border-radius: 10px;
+      background: rgb(240, 240, 240);
+      transition: all 0.3s ease-in 0s;
+      white-space: nowrap;
+      width: 120px;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      &:hover {
+        background: rgb(255, 217, 0);
+        cursor: pointer;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+#footer{
+  background-color: rgb(37, 37, 37);
+  color: rgb(214, 214, 214) !important;
+  padding: 30px 50px;
+  //position: relative;
+  span{
+
+    min-width:100px;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
+  }
+  .items{
+    div{
+      display: flex;
+      margin: 20px;
+    }
+  }
+  .tg{
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+  .toTop{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(248, 220, 59);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    position: fixed;
+    right:50px;
+    bottom: 0px;
+    cursor: pointer;
+    a{
+      color: rgb(102, 100, 100);
+    }
+  }
+}
+
+
+@media screen and  (max-width:1000px){
+  #footer{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) and (min-width: 300px) {
+  #header {
+    div {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    form {
+      width: 100% !important;
+      order: 3;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) and (min-width: 300px) {
+  #header {
+    padding: 20px !important;
+    #userProfile {
+      img {
+        height: 40px !important;
+        width: 40px !important;
+      }
+    }
+    img {
+      height: 45px !important;
+    }
+  }
+  #list {
+    margin: 20px;
+    .list {
+      margin: 0 auto !important;
+      ul {
+        margin: 0 auto !important;
+      }
+    }
+  }
+}
+
+
+body{
+  #first{
+    .container{
+      .row{
+
+          .cards{
+
+
+            .rasm{
+              position:relative;
+              overflow:hidden;
+              border-radius: 7px;
+
+              img{
+                width:100%;
+                height: 200px;
+                border-radius: 7px;
+                overflow: hidden;
+                object-fit: cover;
+                transition:all 0.5s;
+                &:hover{
+                  transform:scale(1.1);
+                  cursor:pointer;
+                }
+              }
+              .qoshish{
+                background-color: rgba(0, 0, 0, 0.5);
+                width:100%;
+                position:absolute;
+                bottom:0;
+                left: 0;
+                padding: 10px 20px;
+                opacity: 0;
+
+                  display:flex;
+                  justify-content:flex-end;
+                  align-items:center;
+                .btn{
+                  box-shadow: none;
+                }
+
+              }
+              &:hover{
+                .qoshish{
+                  transition:all 0.5s;
+                  opacity:1;
+                }
+              }
+            }
+            span.my-2{
+              color: gray;
+            }
+            p{
+
+            }
+          }
+
+      }
+    }
+  }
+  #second{
+    .container{
+      .row{
+
+          .cards{
+            transition:all 0.5s;
+
+            .rasm{
+              position:relative;
+              overflow:hidden;
+              border-radius: 7px;
+
+              img{
+                width:100%;
+                height: 200px;
+                border-radius: 7px;
+                overflow: hidden;
+                object-fit: cover;
+                transition:all 0.5s;
+                cursor:pointer;
+                &:hover{
+                  transform:scale(1.1);
+                }
+              }
+              .qoshish{
+                background-color: rgba(0, 0, 0, 0.5);
+                width:100%;
+                position:absolute;
+                bottom:0;
+                left: 0;
+                padding: 10px 20px;
+                opacity: 0;
+
+                display:flex;
+                justify-content:flex-end;
+                align-items:center;
+                .btn{
+                  box-shadow: none;
+                }
+
+              }
+              &:hover{
+                .qoshish{
+                  transition:all 0.5s;
+                  opacity:1;
+                }
+              }
+            }
+            span.my-2{
+              color: gray;
+            }
+            p{
+
+            }
+
+        }
+      }
+    }
+  }
+  #third{
+    .container{
+      .row{
+        margin-bottom: 50px;
+
+        .cards{
+          transition:all 0.5s;
+
+          .rasm{
+            position:relative;
+            overflow:hidden;
+            border-radius: 7px;
+
+            img{
+              width:100%;
+              height: 200px;
+              border-radius: 7px;
+              overflow: hidden;
+              object-fit: cover;
+              transition:all 0.5s;
+              cursor:pointer;
+              &:hover{
+                transform:scale(1.1);
+              }
+            }
+            .qoshish{
+              background-color: rgba(0, 0, 0, 0.5);
+              width:100%;
+              position:absolute;
+              bottom:0;
+              left: 0;
+              padding: 10px 20px;
+              opacity: 0;
+
+              display:flex;
+              justify-content:flex-end;
+              align-items:center;
+              .btn{
+                box-shadow: none;
+              }
+
+            }
+            &:hover{
+              .qoshish{
+                transition:all 0.5s;
+                opacity:1;
+              }
+            }
+          }
+          span.my-2{
+            color: gray;
+          }
+          p{
+
+          }
+
+        }
+      }
+    }
+  }
+
+
+}
+
+#modal{
+
+width:100%;
+  height:100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background-color: rgba(0, 0, 0, 0.58);
+
+  .card{
+    width:500px;
+    height:600px;
+
+    position: relative;
+    #hideModal{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .img{
+      img{
+        width: 100%;
+      }
+    }
+    .shop{
+      padding:20px;
+    }
+  }
+}
